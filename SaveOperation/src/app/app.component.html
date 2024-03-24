@@ -1,0 +1,281 @@
+<div class="container">
+  <form #userForm="ngForm" (ngSubmit)="getUserData(userForm.value)">
+    <div class="row">
+      <div class="col-6">
+        <h2
+          style="
+            color: rgb(5, 60, 115);
+            text-decoration: underline;
+            font-weight: 700;
+          "
+        >
+          User Info
+        </h2>
+      </div>
+
+      <div class="col-6 text-end">
+        <button
+          type="submit"
+          mat-raised-button
+          style="
+            background-color: rgb(67, 146, 225);
+            color: white;
+            width: 100px;
+          "
+        >
+          Save
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <div class="mb-3">
+          <label for="firstName" class="form-label">First Name</label>
+          <input
+            type="text"
+            ngModel
+            class="form-control"
+            id="firstName"
+            name="firstName"
+          />
+        </div>
+      </div>
+      <div class="col-3">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input
+          type="text"
+          ngModel
+          class="form-control"
+          id="lastName"
+          name="lastName"
+        />
+      </div>
+      <div class="col-3">
+        <label for="preferredName" class="form-label">Preferred Name</label>
+        <input
+          type="text"
+          ngModel
+          class="form-control"
+          id="preferredName"
+          name="preferredName"
+        />
+      </div>
+      <div class="col-3">
+        <label for="pronouns" class="form-label">Pronouns</label>
+        <select
+          class="form-select"
+          ngModel
+          name="pronouns"
+          aria-label="Default select example"
+        >
+          <option selected disabled>Select Pronouns</option>
+          <option value="Mr.">Mr.</option>
+          <option value="Miss.">Miss.</option>
+          <option value="Mrs.">Mrs.</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address (Work)</label>
+          <input
+            type="email"
+            ngModel
+            class="form-control"
+            id="email"
+            name="email"
+          />
+        </div>
+      </div>
+      <div class="col-3">
+        <label for="phoneNumber" class="form-label">Phone Number</label>
+        <input
+          type="text"
+          ngModel
+          class="form-control"
+          id="phoneNumber"
+          name="phoneNumber"
+        />
+      </div>
+      <div class="col-3">
+        <label for="fax" class="form-label">Fax Number</label>
+        <input type="text" ngModel class="form-control" id="fax" name="fax" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <label for="department" class="form-label">Department</label>
+        <select class="form-select" ngModel name="department">
+          <option selected disabled>Select Department</option>
+          <option value="Mr.">Mr.</option>
+          <option value="Miss.">Miss.</option>
+          <option value="Mrs.">Mrs.</option>
+        </select>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-6">
+        <h2
+          style="
+            color: rgb(5, 60, 115);
+            text-decoration: underline;
+            font-weight: 700;
+          "
+        >
+          Work Address
+        </h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3">
+        <label for="addressOne" class="form-label">Address Line 1</label>
+        <input
+          type="text"
+          ngModel
+          class="form-control"
+          id="addressOne"
+          name="addressOne"
+        />
+      </div>
+      <div class="col-3">
+        <label for="addressTwo" class="form-label">Address Line 2</label>
+        <input
+          type="text"
+          ngModel
+          class="form-control"
+          id="addressTwo"
+          name="addressTwo"
+        />
+      </div>
+      <div class="col-3">
+        <label for="city" class="form-label">City</label>
+        <input type="text" ngModel class="form-control" id="city" name="city" />
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-3">
+        <label for="province" class="form-label">Province</label>
+        <input
+          type="text"
+          ngModel
+          class="form-control"
+          id="province"
+          name="province"
+        />
+      </div>
+      <div class="col-3">
+        <label for="country" class="form-label">Country</label>
+        <input
+          type="text"
+          ngModel
+          class="form-control"
+          id="country"
+          name="country"
+        />
+      </div>
+      <div class="col-3">
+        <label for="zipcode" class="form-label">Zip Code</label>
+        <input
+          type="number"
+          ngModel
+          class="form-control"
+          id="zipcode"
+          name="zipcode"
+        />
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-6">
+        <h2
+          style="
+            color: rgb(5, 60, 115);
+            text-decoration: underline;
+            font-weight: 700;
+          "
+        >
+          My Manager
+        </h2>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-3">
+        <label for="managerFirstName" class="form-label">First Name</label>
+        <input
+          type="text"
+          ngModel
+          class="form-control"
+          id="managerFirstName"
+          name="managerFirstName"
+        />
+      </div>
+      <div class="col-3">
+        <label for="managerLastName" class="form-label">Last Name</label>
+        <input
+          type="text"
+          ngModel
+          class="form-control"
+          id="managerLastName"
+          name="managerLastName"
+        />
+      </div>
+      <div class="col-6">
+        <label for="managerMail" class="form-label">Email Address</label>
+        <input
+          type="email"
+          ngModel
+          class="form-control"
+          id="managerMail"
+          name="managerMail"
+        />
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-6">
+        <h2
+          style="
+            color: rgb(5, 60, 115);
+            text-decoration: underline;
+            font-weight: 700;
+          "
+        >
+          Social Profile
+        </h2>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-3">
+        <label for="linkedin" class="form-label">Linked In</label>
+        <input
+          type="text"
+          ngModel
+          class="form-control"
+          id="linkedin"
+          name="linkedin"
+        />
+      </div>
+      <div class="col-3">
+        <label for="facebook" class="form-label">Facebook</label>
+        <input
+          type="text"
+          ngModel
+          class="form-control"
+          id="facebook"
+          name="facebook"
+        />
+      </div>
+      <div class="col-xl-3">
+        <label for="other" class="form-label">Other</label>
+        <input
+          type="text"
+          ngModel
+          class="form-control"
+          id="Other"
+          name="Other"
+        />
+      </div>
+    </div>
+  </form>
+</div>
