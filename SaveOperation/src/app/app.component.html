@@ -108,9 +108,11 @@
         <label for="department" class="form-label">Department</label>
         <select class="form-select" ngModel name="department">
           <option selected disabled>Select Department</option>
-          <option value="Mr.">Mr.</option>
-          <option value="Miss.">Miss.</option>
-          <option value="Mrs.">Mrs.</option>
+          @for (item of dept; track item) {
+          <option [value]="item.department_id">
+            {{ item.department_name }}
+          </option>
+          }
         </select>
       </div>
     </div>
